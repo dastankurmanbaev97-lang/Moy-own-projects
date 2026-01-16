@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир Дастана — Hello Kitty Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fffafb;
+            background-image: radial-gradient(#ffdae9 0.8px, transparent 0.8px);
+            background-size: 24px 24px;
+            font-family: 'Comfortaa', cursive;
+            scroll-behavior: smooth;
+        }
+
+        .kitty-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 4px solid #ffb3c1;
+            border-radius: 40px;
+            box-shadow: 0 10px 25px rgba(255, 179, 193, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .kitty-card:hover {
+            transform: scale(1.03);
+            border-color: #ff85a1;
+        }
+
+        .bow-text {
+            color: #ff4d6d;
+            position: relative;
+            display: inline-block;
+        }
+
+        .bow-text::before {
+            content: '🎀';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+        }
+
+        .pink-gradient-bg {
+            background: linear-gradient(180deg, #ffdeeb 0%, #fffafb 100%);
+        }
+
+        .btn-kitty {
+            background: #ff85a1;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: 3px solid #ffb3c1;
+            transition: 0.3s;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .btn-kitty:hover {
+            background: #ff4d6d;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .heart { color: #ff4d6d; }
+    </style>
+</head>
+<body class="text-pink-900">
+
+    <nav class="p-6 flex justify-center gap-8 font-bold text-pink-500">
+        <a href="#projects" class="hover:text-pink-700 transition">ПРОЕКТЫ</a>
+        <a href="#contacts" class="hover:text-pink-700 transition">СВЯЗЬ</a>
+    </nav>
+
+    <header class="max-w-4xl mx-auto text-center py-20 px-6">
+        <div class="mb-8 floating">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Hello_kitty_character_portrait.png/220px-Hello_kitty_character_portrait.png" 
+                 alt="Hello Kitty" class="w-32 mx-auto">
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 bow-text uppercase tracking-widest">
+            Дастан мой господин
+        </h1>
+        
+        <p class="text-xl text-pink-400 mb-10">Добро пожаловать в мой уютный уголок проектов ✨</p>
+        
+        <a href="#projects" class="btn-kitty">Смотреть проекты 🐾</a>
+    </header>
+
+    <main id="projects" class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-4">
+            <span class="heart">❤</span> МОИ РАБОТЫ <span class="heart">❤</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="kitty-card p-8 text-center">
+                <div class="text-5xl mb-4">⭐</div>
+                <h3 class="text-2xl font-bold mb-3">Project One</h3>
+                <p class="text-pink-400 mb-6 text-sm">Здесь будет описание твоего первого крутого проекта.</p>
+                <a href="#" class="text-pink-600 font-bold hover:underline">Открыть →</a>
+            </div>
+
+            <div class="kitty-card p-8 text-center">
+                <div class="text-5xl mb-4">🎀</div>
+                <h3 class="text-2xl font-bold mb-3">Project Two</h3>
+                <p class="text-pink-400 mb-6 text-sm">Твое приложение или сайт, которым ты гордишься.</p>
+                <a href="#" class="text-pink-600 font-bold hover:underline">Открыть →</a>
+            </div>
+
+            <div class="kitty-card p-8 text-center">
+                <div class="text-5xl mb-4">🍭</div>
+                <h3 class="text-2xl font-bold mb-3">Project Three</h3>
+                <p class="text-pink-400 mb-6 text-sm">Еще один пример твоей гениальной разработки.</p>
+                <a href="#" class="text-pink-600 font-bold hover:underline">Открыть →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacts" class="pink-gradient-bg py-20 px-6 text-center">
+        <div class="kitty-card max-w-2xl mx-auto p-10">
+            <h2 class="text-2xl font-bold mb-6">Связаться со мной</h2>
+            
+            <div class="flex flex-col gap-4 text-lg">
+                <div class="flex items-center justify-center gap-3">
+                    <span>📞</span>
+                    <a href="tel:0555191870" class="hover:text-pink-600 transition font-bold">0555191870</a>
+                </div>
+                
+                <div class="flex items-center justify-center gap-3">
+                    <span>✉</span>
+                    <a href="mailto:dastankurmanbaev97@gmail.com" class="hover:text-pink-600 transition font-bold">dastankurmanbaev97@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="mt-8 text-pink-300 text-sm">
+                Создано специально для Дастана 🌸
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
