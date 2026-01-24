@@ -1,94 +1,29 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мир Дастана — Hello Kitty Style</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #fffafb;
-            background-image: radial-gradient(#ffdae9 0.8px, transparent 0.8px);
-            background-size: 24px 24px;
-            font-family: 'Comfortaa', cursive;
-            scroll-behavior: smooth;
-        }
-        .kitty-card {
-            background: rgba(255, 255, 255, 0.9);
-            border: 4px solid #ffb3c1;
-            border-radius: 40px;
-            box-shadow: 0 10px 25px rgba(255, 179, 193, 0.3);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .kitty-card:hover {
-            transform: scale(1.02);
-            border-color: #ff85a1;
-        }
-        .bow-text {
-            color: #ff4d6d;
-            position: relative;
-            display: inline-block;
-        }
-        .bow-text::before {
-            content: '🎀';
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 2.5rem;
-        }
-        .btn-kitty {
-            background: #ff85a1;
-            color: white;
-            padding: 12px 35px;
-            border-radius: 50px;
-            border: 3px solid #ffb3c1;
-            transition: 0.3s;
-            display: inline-block;
-            font-weight: bold;
-        }
-        .btn-kitty:hover {
-            background: #ff4d6d;
-            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
-        }
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-        }
-    </style>
-</head>
-<body class="text-pink-900">
-
-    <header class="max-w-4xl mx-auto text-center py-20 px-6">
-        <div class="mb-10 floating">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Hello_kitty_character_portrait.png/220px-Hello_kitty_character_portrait.png" 
-                 alt="Hello Kitty" class="w-32 mx-auto">
-        </div>
-        
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 bow-text uppercase tracking-widest">
-          
-        </h1>
-        
-        <p class="text-xl text-pink-400 mb-10">Проекты, созданные с умом и стилем ✨</p>
-    </header>
-
-    <main id="projects" class="max-w-6xl mx-auto px-6 py-10">
+<main id="projects" class="max-w-6xl mx-auto px-6 py-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             
-            <div class="kitty-card p-6 md:col-span-2">
-                <h3 class="text-2xl font-bold mb-4 text-center">🐾 Мой проект на Scratch</h3>
-                <div class="relative rounded-[30px] overflow-hidden border-4 border-pink-100">
+            <div class="kitty-card p-6">
+                <h3 class="text-2xl font-bold mb-4 text-center">🐾 Проект на Scratch 1</h3>
+                <div class="relative rounded-[30px] overflow-hidden border-4 border-pink-100 h-[300px]">
                     <video controls class="w-full h-full object-cover" autoplay muted loop playsinline>
                         <source src="запись скретч.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                 </div>
-                <p class="mt-4 text-center text-pink-500 font-medium italic">
-                    Запись экрана процесса разработки в Scratch
+                <p class="mt-4 text-center text-pink-500 font-medium italic text-sm">
+                    Первая запись процесса разработки
+                </p>
+            </div>
+
+            <div class="kitty-card p-6">
+                <h3 class="text-2xl font-bold mb-4 text-center">🎀 Project Video 2</h3>
+                <div class="relative rounded-[30px] overflow-hidden border-4 border-pink-100 h-[300px]">
+                    <video controls class="w-full h-full object-cover" autoplay muted loop playsinline>
+                        <source src="project video 2.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+                <p class="mt-4 text-center text-pink-500 font-medium italic text-sm">
+                    Демонстрация второго проекта
                 </p>
             </div>
 
@@ -108,27 +43,3 @@
 
         </div>
     </main>
-
-    <footer id="contacts" class="py-20 px-6">
-        <div class="kitty-card max-w-2xl mx-auto p-12 text-center relative">
-            <div class="absolute -top-6 -right-6 text-5xl">🎀</div>
-            <h2 class="text-3xl font-bold mb-8">Контакты Господина</h2>
-            
-            <div class="flex flex-col gap-6 text-xl">
-                <div class="flex items-center justify-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
-                    <span class="text-2xl">📱</span>
-                    <a href="tel:0555191870" class="hover:text-pink-600 transition font-bold">0555191870</a>
-                </div>
-                
-                <div class="flex items-center justify-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
-                    <span class="text-2xl">✉</span>
-                    <a href="mailto:dastankurmanbaev97@gmail.com" class="hover:text-pink-600 transition font-bold break-all">dastankurmanbaev97@gmail.com</a>
-                </div>
-            </div>
-            
-            <p class="mt-10 text-pink-300 text-sm italic">© 2024 Dastan World • Все права защищены</p>
-        </div>
-    </footer>
-
-</body>
-</html>
