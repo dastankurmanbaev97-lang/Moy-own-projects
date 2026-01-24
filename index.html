@@ -1,45 +1,123 @@
-<main id="projects" class="max-w-6xl mx-auto px-6 py-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курманбаев Дастан — Портфолио</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .video-box {
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #0f172a, #334155);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="max-w-5xl mx-auto pt-20 pb-16 px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight gradient-text">
+            Курманбаев Дастан
+        </h1>
+        <div class="flex flex-col items-center gap-2">
+            <span class="px-4 py-1 bg-slate-200 text-slate-700 rounded-full text-sm font-semibold">
+                Школа №24 • 8 класс
+            </span>
+            <p class="text-slate-500 text-lg max-w-lg mt-4">
+                Разработка проектов на Scratch и веб-дизайн. 
+                Портфолио выполненных работ.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 pb-20">
+        <h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
+            <span class="w-8 h-1 bg-blue-600 rounded-full"></span>
+            Мои проекты
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <div class="kitty-card p-6">
-                <h3 class="text-2xl font-bold mb-4 text-center">🐾 Проект на Scratch 1</h3>
-                <div class="relative rounded-[30px] overflow-hidden border-4 border-pink-100 h-[300px]">
-                    <video controls class="w-full h-full object-cover" autoplay muted loop playsinline>
+            <div class="glass-card p-5">
+                <div class="video-box mb-4">
+                    <video controls class="w-full h-full object-cover">
                         <source src="запись скретч.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                 </div>
-                <p class="mt-4 text-center text-pink-500 font-medium italic text-sm">
-                    Первая запись процесса разработки
-                </p>
+                <h3 class="text-xl font-bold mb-2">Разработка в Scratch</h3>
+                <p class="text-slate-500 text-sm italic">Демонстрация игровых механик и логики проекта.</p>
             </div>
 
-            <div class="kitty-card p-6">
-                <h3 class="text-2xl font-bold mb-4 text-center">🎀 Project Video 2</h3>
-                <div class="relative rounded-[30px] overflow-hidden border-4 border-pink-100 h-[300px]">
-                    <video controls class="w-full h-full object-cover" autoplay muted loop playsinline>
+            <div class="glass-card p-5">
+                <div class="video-box mb-4">
+                    <video controls class="w-full h-full object-cover">
                         <source src="project video 2.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                 </div>
-                <p class="mt-4 text-center text-pink-500 font-medium italic text-sm">
-                    Демонстрация второго проекта
-                </p>
+                <h3 class="text-xl font-bold mb-2">Project Video 2</h3>
+                <p class="text-slate-500 text-sm italic">Второй этап разработки и визуальные эффекты.</p>
             </div>
 
-            <div class="kitty-card p-8 text-center">
-                <div class="text-5xl mb-4">⭐</div>
-                <h3 class="text-2xl font-bold mb-3">Будущий проект</h3>
-                <p class="text-pink-400 mb-6 text-sm">Здесь скоро появится еще одна крутая работа господина Дастана.</p>
-                <a href="#" class="btn-kitty">Скоро...</a>
+            <div class="glass-card p-8 flex flex-col justify-center items-center text-center border-dashed border-2">
+                <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-4 text-2xl">✨</div>
+                <h3 class="font-bold">Будущий проект</h3>
+                <p class="text-slate-400 text-sm">В процессе разработки...</p>
             </div>
 
-            <div class="kitty-card p-8 text-center">
-                <div class="text-5xl mb-4">🍭</div>
-                <h3 class="text-2xl font-bold mb-3">Веб-дизайн</h3>
-                <p class="text-pink-400 mb-6 text-sm">Примеры верстки и оформления интерфейсов.</p>
-                <a href="#" class="btn-kitty">В разработке</a>
+            <div class="glass-card p-8 flex flex-col justify-center items-center text-center border-dashed border-2">
+                <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-4 text-2xl">🎨</div>
+                <h3 class="font-bold">Веб-дизайн</h3>
+                <p class="text-slate-400 text-sm">Примеры интерфейсов</p>
             </div>
 
         </div>
     </main>
+
+    <footer class="bg-white border-t border-slate-200 py-16 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-8 tracking-tight">Контакты</h2>
+            <div class="flex flex-wrap justify-center gap-6 text-slate-600">
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold text-slate-900">Тел:</span>
+                    <a href="tel:0555191870" class="hover:text-blue-600 transition">0555191870</a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-semibold text-slate-900">Email:</span>
+                    <a href="mailto:dastankurmanbaev97@gmail.com" class="hover:text-blue-600 transition">dastankurmanbaev97@gmail.com</a>
+                </div>
+            </div>
+            <p class="mt-12 text-slate-400 text-xs uppercase tracking-widest">
+                © 2026 Dastan Kurmanbaev • School #24
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
