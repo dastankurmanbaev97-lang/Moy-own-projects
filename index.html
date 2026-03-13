@@ -24,6 +24,11 @@
             border-color: #3b82f6;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
         }
+        /* Стиль для главного проекта */
+        .featured-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+            border: 2px solid #3b82f6;
+        }
         .video-container {
             position: relative;
             aspect-ratio: 16 / 9;
@@ -75,9 +80,42 @@
     </header>
 
     <main class="max-w-5xl mx-auto px-6 pb-24">
+        
+        <div class="mb-16">
+            <div class="flex flex-col mb-8">
+                <div class="section-line mb-4"></div>
+                <h2 class="text-3xl font-bold text-slate-800">Главный проект</h2>
+            </div>
+
+            <div class="glass-card featured-card p-8 flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                    <span class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">AI Machine Learning</span>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-900">School Boss: Анализ главной мысли текста</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Инновационный инструмент на базе ИИ, который мгновенно анализирует любой текст и выделяет его ключевую суть. Идеально подходит для студентов и исследователей для быстрой обработки информации.
+                    </p>
+                    <a href="https://dastankurmanbaev97-lang.github.io/school-boss/" target="_blank" 
+                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200">
+                        Открыть проект
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="video-container shadow-2xl mb-0">
+                         <div class="absolute inset-0 flex items-center justify-center text-white bg-blue-900 bg-opacity-40">
+                             <span class="text-sm font-medium">Интеллектуальный анализ текста</span>
+                         </div>
+                         <video muted loop autoplay playsinline>
+                            <source src="Project 3.mp4" type="video/mp4">
+                         </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="flex flex-col mb-12">
             <div class="section-line mb-4"></div>
-            <h2 class="text-3xl font-bold text-slate-800">Портфолио проектов</h2>
+            <h2 class="text-3xl font-bold text-slate-800">Все проекты</h2>
             <p class="text-slate-500 mt-2">Видео-обзоры моих последних разработок</p>
         </div>
         
